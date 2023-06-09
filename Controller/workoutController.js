@@ -29,7 +29,7 @@ const createWorkout = async(req,res) =>{
 const getAllworkouts = async(req,res)=>{
 	//get all workout and sort them by descending order
 		const workout= await Workout.find({}).sort({createdAt:-1})
-	res.json({
+		res.json({
 		message: 'All workouts',
 		data: workout
 	})
